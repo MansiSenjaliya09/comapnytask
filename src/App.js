@@ -16,7 +16,7 @@ function App() {
       .then((response) => {
         const fetchedUsers = response.data.users;
         setUsers(fetchedUsers);
-        setFilteredUsers(fetchedUsers); // Initialize filteredUsers with fetched users
+        setFilteredUsers(fetchedUsers); 
 
    
         const uniqueBloodGroups = Array.from(
