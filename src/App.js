@@ -10,7 +10,7 @@ function App() {
   const [filteredUsers, setFilteredUsers] = useState([]);
 
   useEffect(() => {
-    // Fetch users from the API using Axios
+    
     axios
       .get("https://dummyjson.com/users")
       .then((response) => {
@@ -18,7 +18,7 @@ function App() {
         setUsers(fetchedUsers);
         setFilteredUsers(fetchedUsers); // Initialize filteredUsers with fetched users
 
-        // Extract unique blood groups from users
+   
         const uniqueBloodGroups = Array.from(
           new Set(fetchedUsers.map((user) => user.bloodGroup))
         );
@@ -30,7 +30,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // Filter users based on the search term and selected blood group
+   
     const filtered = users.filter((user) => {
       const searchRegex = new RegExp(searchTerm, "i");
       return (
